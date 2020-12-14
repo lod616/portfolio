@@ -1,0 +1,106 @@
+.my-work {
+  overflow-x: hidden;
+}
+
+.work-projects {
+  flex-wrap: wrap;
+  animation-name: fade-left;
+	animation-duration: 1s;
+  &__item {
+    max-width: 250px;
+    margin-bottom: 15px;
+		margin-right: 25px;
+		width: 100%;
+	}
+  &__img {
+    overflow: hidden;
+    &:hover {
+      img {
+        transition: all ease-in-out 0.2s;
+        opacity: 0.2;
+      }
+    }
+    img {
+      max-height: 160px;
+      width: 100%;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: column;
+  }
+  &__btn {
+    display: inline-block;
+    padding: 8px 20px;
+    &.work-projects__btn--light {
+      background-color: #cecdcd;
+      color: #333;
+      &:hover{
+        background-color: #a5a4a4;
+      }
+    }
+    &.work-projects__btn--dark {
+      background-color: #2b2b2b;
+      color: #fff;
+      &:hover{
+        background-color: #444242;
+      }
+    }
+    &-icon {
+      width: 20px;
+      height: 20px;
+      &.work-projects__btn-icon--github {
+        fill: #fff;
+      }
+    }
+    &-text {
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.tabs{
+	&__btns{
+		display: flex;
+		width: 100%;
+	}
+	&__btn {
+		flex: 1 1 100%;
+		background-color: #323232;
+		border: none;
+		padding: 8px;
+		position: relative;
+		width: 100%;
+		max-width: 220px;
+		cursor: pointer;
+		outline: none;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			width: 100%;
+			background-color: $secondary-color;
+			transform: scaleX(0);
+			transform-origin: center;
+			transition: transform .2s ease;
+		}
+		&.is-active {
+			cursor: default;
+			&:after {
+				transform: scaleX(1);
+			}
+		}
+	}
+	&__content {
+		margin-top: 2px
+	}
+	&__item {
+		display: none;
+		&.is-active {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,123 @@
+include helpers/mixins
+block variables
+	- var title = 'My Work'
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body(class='my-work')
+		.wrapper.wrapper--work
+			header.header
+				.header-burger
+					span.header-burger__line
+					span.header-burger__line
+					span.header-burger__line
+				nav.header-menu
+					.header-menu__left
+						.portrait
+							img(src="static/images/content/port-1.jpg" alt="portrait" class="portrait__img")
+					ul.header-menu__list
+						li.header-menu__item
+							a(href="index.html").header-menu__link Home
+						li.header-menu__item
+							a(href="my-work.html").header-menu__link.header-menu__link--current My work
+						li.header-menu__item
+							a(href="skills.html").header-menu__link.header-menu__link Skills
+						li.header-menu__item
+							a(href="contact.html").header-menu__link Contact
+			.content
+				section.work
+					.container
+						h1.title-section.title-section--work My Work
+						.tabs
+							.tabs__btns
+								.tabs__btn.is-active HTML coding
+								.tabs__btn JavaScript
+							.tabs__content
+								.work-projects.tabs__item.is-active
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-1.jpg" alt="Mocup 1")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/Emerald-page/build/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/Emerald-page" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-2.jpg" alt="Mocup 2")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/Venev/build/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/Venev" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-3.jpg" alt="Mocup 3")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/FullWinter-layout/build/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/FullWinter-layout" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-4.jpg" alt="Mocup 4")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/Unicorn/build/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/Unicorn" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-5.jpg" alt="Mocup 5")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/Bargain-page/build/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/Bargain-page" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-6.jpg" alt="Mocup 6")
+										.work-projects__btns
+											a(href="https://marginal354.github.io/exploore/dist/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="https://github.com/marginal354/exploore" target="_blank").work-projects__btn.work-projects__btn--dark
+												+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+												span.work-projects__btn-text Github
+								.work-projects.tabs__item
+									.work-projects__item
+											.work-projects__img
+												img(src="static/images/content/simon.jpg" alt="simon-js")
+											.work-projects__btns
+												a(href="https://marginal354.github.io/simon-js/dist/" target="_blank").work-projects__btn.work-projects__btn--light
+													+icon("eye", "work-projects__btn-icon")
+													span.work-projects__btn-text View
+												a(href="https://github.com/marginal354/simon-js" target="_blank").work-projects__btn.work-projects__btn--dark
+													+icon("github","work-projects__btn-icon work-projects__btn-icon--github")
+													span.work-projects__btn-text Github
+
+		script(src="static/js/libs.js")
+		script(src="static/js/main.js")

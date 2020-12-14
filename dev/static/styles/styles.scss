@@ -1,0 +1,181 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/sprite";
+//@include sprites($spritesheet-sprites);
+
+html {
+  font-size: 16px;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: $main-font;
+  color: $white;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video,
+textarea {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+section {
+  position: relative;
+  padding-top: 70px;
+}
+
+input,
+select,
+button {
+  outline: none;
+}
+
+.body_hide {
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  z-index: 2;
+  position: relative;
+  &--home {
+    background-color: #323232;
+  }
+  &--skills {
+    background: rgb(0,23,36);
+    background: linear-gradient(204deg, rgba(0,23,36,1) 0%, rgba(48,196,177,1) 100%, rgba(0,255,132,1) 100%);
+  }
+  &--contact {
+    background-color: #4f1c36;
+  }
+  &--work {
+    background-color: #1c4150;
+  }
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 40px;
+  width: 100%;
+}
+
+$aos-distance: 100px !default;
+@keyframes fade-left {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translate3d($aos-distance, 0, 0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-right {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translate3d(-$aos-distance, 0, 0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.text-color__yellow {
+  color: $secondary-color;
+  &.text-color__yellow--ml {
+    margin-left: 10px;
+  }
+}
+
+.title-section {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $secondary-color;
+  @include screen(550px) {
+    font-size: 20px;
+  }
+  &--main {
+    font-size: 30px;
+  }
+}
+
+//Модули
+@import "modules/modules";

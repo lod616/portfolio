@@ -1,0 +1,84 @@
+include helpers/mixins
+block variables
+	- var title = 'My Work'
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		.wrapper.wrapper--skills
+			header.header
+				.header-burger
+					span.header-burger__line
+					span.header-burger__line
+					span.header-burger__line
+				nav.header-menu
+					.header-menu__left
+						.portrait
+							img(src="static/images/content/port-1.jpg" alt="portrait" class="portrait__img")
+					ul.header-menu__list
+						li.header-menu__item
+							a(href="index.html").header-menu__link Home
+						li.header-menu__item
+							a(href="my-work.html").header-menu__link.header-menu__link My work
+						li.header-menu__item
+							a(href="skills.html").header-menu__link.header-menu__link--current Skills
+						li.header-menu__item
+							a(href="contact.html").header-menu__link Contact
+			.content
+				section.skills
+					.container
+						h1.title-section.title-section--work Skills
+						.skills-bar
+							.skills-bar-block
+								h3.skills-bar__title Languages & Cms
+								.skills-bar__item
+									span.skills-bar__name Html / Pug
+									.skills-bar__progress
+										span.skills-bar__progress-val.skills-bar__progress-val--ht
+										span.skills-bar__progress-num.skills-bar__progress-num--ht 85%
+								.skills-bar__item
+									span.skills-bar__name Css / Scss
+									.skills-bar__progress
+										span.skills-bar__progress-val.skills-bar__progress-val--css
+										span.skills-bar__progress-num.skills-bar__progress-num--css 80%
+								.skills-bar__item
+									span.skills-bar__name JavaScript
+									.skills-bar__progress
+										span.skills-bar__progress-val.skills-bar__progress-val--js
+										span.skills-bar__progress-num.skills-bar__progress-num--js 50%
+								.skills-bar__item
+									span.skills-bar__name Php
+									.skills-bar__progress
+										span.skills-bar__progress-val.skills-bar__progress-val--php
+										span.skills-bar__progress-num.skills-bar__progress-num--php 40%
+								.skills-bar__item
+									span.skills-bar__name Wordpress
+									.skills-bar__progress
+										span.skills-bar__progress-val.skills-bar__progress-val--wp
+										span.skills-bar__progress-num.skills-bar__progress-num--wp 60%
+
+							.skills-bar-block
+								h3.skills-bar__title Methods & Tolls
+								ul.skills-bar-tools
+									li.skills-bar-tools__item Gulp
+									li.skills-bar-tools__item Git
+									li.skills-bar-tools__item Bem
+									li.skills-bar-tools__item Work with svg
+
+
+
+
+		script(src="static/js/main.js")

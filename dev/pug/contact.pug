@@ -1,0 +1,56 @@
+include helpers/mixins
+block variables
+	- var title = 'Contacts'
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+
+		<!--[if lt IE 9]>
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js")
+		<![endif]-->
+	body
+		.wrapper.wrapper--contact
+			header.header
+				.header-burger
+					span.header-burger__line
+					span.header-burger__line
+					span.header-burger__line
+				nav.header-menu
+					.header-menu__left
+						.portrait
+							img(src="static/images/content/port-1.jpg" alt="portrait" class="portrait__img")
+					ul.header-menu__list
+						li.header-menu__item
+							a(href="index.html").header-menu__link Home
+						li.header-menu__item
+							a(href="my-work.html").header-menu__link My work
+						li.header-menu__item
+							a(href="skills.html").header-menu__link.header-menu__link Skills
+						li.header-menu__item
+							a(href="contact.html").header-menu__link.header-menu__link--current Contact
+			.content
+				section.contact
+					.container
+						h1.title-section Contact me
+						.contacts
+							.contacts-item
+								+icon('email', 'contacts-item__link-icon contacts-item__link-icon--email')
+								a(href="mailto:metarx354@mail.ru").contacts-item__link metarx354@mail.ru
+							.social-networks
+								a(href="https://t.me/singur616" target="_blank").social-networks__telegram
+									+icon("telegram", "social-networks__icon social-networks__icon-telegram")
+								a(href="https://github.com/marginal354" target="_blank").social-networks__github
+									+icon("github", "social-networks__icon social-networks__icon-github")
+
+
+
+		script(src="static/js/main.js")

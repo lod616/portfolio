@@ -1,0 +1,118 @@
+header { flex: 0 0 auto; }
+
+.header {
+	position: fixed;
+	width: 100%;
+	height: 70px;
+	z-index: 3;
+}
+
+.header-burger {
+  align-items: center;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+	position: absolute;
+	top: 30px;
+	right: 40px;
+  cursor: pointer;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+  &__line {
+    display: inline-block;
+    width: 28px;
+    height: 3px;
+    background-color:#9f9f9f;
+    margin-bottom: 7px;
+    &:first-child {
+      margin-top: 9px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &.header-burger--active {
+    transform: rotate(180deg);
+    .header-burger__line {
+      &:nth-child(1) {
+        transform: translateY(3px);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+.header-menu {
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+	width: 100%;
+  z-index: 2;
+  visibility: hidden;
+  &.header-menu--active {
+    visibility: visible;
+    .header-menu__left {
+      transform: translate3d(0, 0, 0);
+    }
+    .header-menu__list {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  &__left {
+		background: rgba(56,56,56, 0.9);
+    transform: translate3d(0, 100%, 0);
+		transition: all ease-in-out 0.3s;
+  }
+  &__list {
+		background: rgba(41,41,41, 0.9);
+    transform: translate3d(0, -100%, 0);
+    transition: all ease-in-out 0.3s;
+  }
+  &__left,
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+		height: 100vh;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  &__link {
+    font-size: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    @include screen(550px) {
+      font-size: 22px;
+    }
+    &.header-menu__link--current {
+      color: $secondary-color;
+    }
+  }
+}
+
+.portrait{
+  width: 200px;
+  height: 195px;
+  border: 2px solid $secondary-color;
+  border-radius: 50%;
+  overflow: hidden;
+  @include screen(550px) {
+    @include size(150px);
+  }
+  &--main{
+    //border: 0;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,128 @@
+.skills {
+  padding-bottom: 20px;
+}
+
+.skills-bar {
+  align-items: baseline;
+  display: flex;
+  animation-name: fade-right;
+  animation-duration: 1s;
+  @include screen(650px) {
+    flex-direction: column;
+  }
+  &-block {
+    flex: 1 0 auto;
+    @include screen(650px) {
+      padding: 10px;
+    }
+    & > * {
+      margin-bottom: 25px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(1) {
+      width: 65%;
+      @include screen(650px) {
+        width: auto;
+        border-right: 0;
+        border-bottom: 2px solid #7b7b7b;
+      }
+    }
+    &:nth-child(2) {
+      padding: 20px;
+    }
+  }
+  &__title {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      background-color: #eece1a;
+      left: 0;
+      width: 30px;
+      height: 2px;
+    }
+  }
+  &__item {
+    position: relative;
+    z-index: 2;
+  }
+  &__name {
+    letter-spacing: 2px;
+    width: 100%;
+    max-width: 110px;
+    height: 20px;
+  }
+  &__progress {
+    position: relative;
+    background: #d0d0d0;
+    border-radius: 25px 0 50px 25px;
+    display: block;
+    height: 20px;
+    top: 1px;
+    width: 80%;
+    z-index: -1;
+    @include screen(650px) {
+      width: auto;
+    }
+    &-val {
+      background-color: $white;
+      border-radius: 25px 0 50px 25px;
+      display: block;
+      height: 20px;
+      &--ht {
+        width: 85%;
+      }
+      &--css {
+        width: 80%;
+      }
+      &--js {
+        width: 50%;
+      }
+      &--php {
+        width: 40%;
+      }
+      &--wp {
+        width: 60%;
+      }
+    }
+    &-num {
+      position: absolute;
+      top: -25px;
+      &--ht {
+        left: 85%;
+      }
+      &--css {
+        left: 80%;
+      }
+      &--js {
+        left: 50%;
+      }
+      &--php {
+        left: 30%;
+      }
+      &--wp {
+        left: 40%;
+      }
+    }
+  }
+  &-tools {
+    & > * {
+      margin-bottom: 15px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__item {
+      border-bottom: 2px solid $white;
+    }
+  }
+}
