@@ -126,12 +126,12 @@ button {
   width: 100%;
 }
 
-$aos-distance: 100px !default;
+$distance: 100px !default;
 @keyframes fade-left {
   0%,
   15% {
     opacity: 0;
-    transform: translate3d($aos-distance, 0, 0);
+    transform: translate3d($distance, 0, 0);
   }
   70% {
     opacity: 1;
@@ -145,7 +145,21 @@ $aos-distance: 100px !default;
   0%,
   15% {
     opacity: 0;
-    transform: translate3d(-$aos-distance, 0, 0);
+    transform: translate3d(-$distance, 0, 0);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-top {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translate3d(0, -$distance, 0);
   }
   70% {
     opacity: 1;

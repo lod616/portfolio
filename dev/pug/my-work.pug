@@ -43,10 +43,23 @@ html(lang="en")
 						h1.title-section.title-section--work My Work
 						.tabs
 							.tabs__btns
-								.tabs__btn.is-active HTML coding
-								.tabs__btn JavaScript
+								.tabs__btn.is-active
+									span.tabs__btn-htmltext HTML
+									+icon("html", "tabs__btn-htmlicon")
+								.tabs__btn
+									span.tabs__btn-jstext JavaScript
+									span.tabs__btn-jsicon {}
 							.tabs__content
 								.work-projects.tabs__item.is-active
+									.work-projects__item
+										.work-projects__img
+											img(src="static/images/content/mocup-7.jpg" alt="Mocup 7")
+										.work-projects__btns
+											a(href="https://td-bashir.ru/" target="_blank").work-projects__btn.work-projects__btn--light
+												+icon("eye", "work-projects__btn-icon")
+												span.work-projects__btn-text View
+											a(href="javascript:void(0)").work-projects__btn.work-projects__btn--dark
+												span.work-projects__btn-text Вёрстка по макету
 									.work-projects__item
 										.work-projects__img
 											img(src="static/images/content/mocup-1.jpg" alt="Mocup 1")
