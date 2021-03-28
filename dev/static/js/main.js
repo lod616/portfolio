@@ -8,9 +8,9 @@ function showHeaderMenu () {
 	});
 } showHeaderMenu();
 
-let tabs = document.querySelector('.tabs')
-let btns = tabs.querySelectorAll('.tabs__btn')
-let items = tabs.querySelectorAll('.tabs__item')
+let tabs = document.querySelector('.tabs');
+let btns = tabs.querySelectorAll('.tabs__btn');
+let items = tabs.querySelectorAll('.tabs__item');
 
 function change(arr, i) {
 	arr.forEach(item => {

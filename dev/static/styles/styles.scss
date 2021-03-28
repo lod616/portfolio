@@ -99,6 +99,7 @@ button {
   flex-direction: column;
   min-height: 100vh;
   z-index: 2;
+  overflow-x: hidden;
   position: relative;
   &--home {
     background-color: #323232;
