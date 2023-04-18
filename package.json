@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp --prod",
-    "style:lint": "stylelint ./dev/static/styles/**/*.scss --syntax scss",
-    "style:fix": "stylelint './dev/static/styles/**/*.scss' --syntax scss --fix"
+    "build": "gulp --prod"
   },
   "author": "Саламатин Анатолий",
   "license": "ISC",
@@ -34,19 +32,15 @@
     "gulp-plumber": "^1.2.1",
     "gulp-pug": "^4.0.1",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-stylelint": "^13.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
     "gulp-w3c-html-validator": "^2.0.0",
     "gulp.spritesmith": "^6.11.0",
     "merge-stream": "^2.0.0",
-    "node-sass": "^4.13.1",
-    "stylelint": "^13.2.1",
-    "stylelint-config-standard-scss": "^1.1.0",
-    "stylelint-scss": "^3.15.0",
     "vinyl-buffer": "^1.0.1",
     "yargs": "^15.3.1"
   },

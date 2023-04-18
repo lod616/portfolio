@@ -5,8 +5,6 @@
 .skills-bar {
   align-items: baseline;
   display: flex;
-  animation-name: fade-right;
-  animation-duration: 1s;
   @include screen(650px) {
     flex-direction: column;
   }
@@ -14,18 +12,21 @@
     @include min-screen(650px) {
       margin-right: 40px;
     }
-    &:last-child {margin-right: 0;}}
-    @include screen(650px) {
-      & > * {
-        margin-bottom: 30px;
-        &:first-child {
-          margin-top: 0;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include screen(650px) {
+    & > * {
+      margin-bottom: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
+  }
   &-block {
     & > * {
       margin-bottom: 25px;
