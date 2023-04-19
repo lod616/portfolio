@@ -176,6 +176,10 @@ $distance: 100px !default;
   }
 }
 
+.trs {
+  transition: 7s;
+}
+
 .text-color__yellow {
   color: $secondary-color;
   &.text-color__yellow--ml {
