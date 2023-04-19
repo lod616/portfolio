@@ -1,4 +1,6 @@
 .contacts {
+  animation-name: fade-top;
+  animation-duration: 800ms;
   & > * {
     margin-bottom: 20px;
     &:first-child {
