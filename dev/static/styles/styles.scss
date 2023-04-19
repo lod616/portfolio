@@ -176,6 +176,16 @@ $distance: 100px !default;
   }
 }
 
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .trs {
   transition: 7s;
 }
