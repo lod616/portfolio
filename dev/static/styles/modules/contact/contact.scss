@@ -1,51 +1,29 @@
 .contacts {
   animation-name: fade-top;
   animation-duration: 800ms;
+  display: flex;
+  flex-direction: column;
   & > * {
     margin-bottom: 20px;
-    &:first-child {
-      margin-top: 0;
-    }
     &:last-child {
       margin-bottom: 0;
     }
   }
-  &-item {
-    align-items: center;
-    display: flex;
+  &-icon {
+    @include size(40px);
+  }
+  &-mail {
     & > * {
       &:not(:last-child) {
         margin-right: 10px;
       }
     }
-    &__link {
-      height: 40px;
-      padding: 10px;
-      line-height: 1.4;
-      background-color: #757575;
-      border-radius: 6px;
+  }
+  &-link {
+    max-width: 30px;
+    &--mail {
       color: $white;
-      font-size: 14px;
-      font-style: italic;
-      width: 100%;
-      max-width: 150px;
-      &-icon {
-        @include size(45px);
-        &--email {
-          margin-bottom: 5px;
-        }
-      }
+      letter-spacing: 1px;
     }
-  }
-}
-
-.social-networks {
-  & > * {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-  &__icon {
-    @include size(35px);
   }
 }

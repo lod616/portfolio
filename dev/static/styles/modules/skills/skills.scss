@@ -55,6 +55,7 @@
   }
   &__title {
     position: relative;
+    font-size: 20px;
     &::after {
       content: "";
       position: absolute;
@@ -94,7 +95,7 @@
         width: 90%;
       }
       &--css {
-        width: 90%;
+        width: 80%;
       }
       &--js {
         width: 60%;

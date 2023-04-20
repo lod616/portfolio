@@ -61,15 +61,17 @@
 .tabs {
   &__btns {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    margin-bottom: 30px;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
   }
   &__btn {
     align-items: center;
     display: flex;
-    background-color: #323232;
     border: none;
-    padding: 0 6px;
     position: relative;
     width: 100%;
     height: 35px;
@@ -94,17 +96,8 @@
         transform: scaleX(1);
       }
     }
-    &-htmlicon {
-      width: 60px;
-      height: 40px;
-    }
-    &-jstext {
-      margin-right: 10px;
-    }
-    &-jsicon {
-      font-size: 20px;
-      font-weight: bold;
-      color: red;
+    &-text {
+      letter-spacing: 2px;
     }
   }
   &__content {

@@ -106,19 +106,28 @@ button {
     background-color: #323232;
   }
   &--skills {
-    background: rgb(0, 23, 36);
     background: linear-gradient(
-      204deg,
+      30deg,
       rgba(0, 23, 36, 1) 0%,
-      rgba(48, 196, 177, 1) 100%,
+      rgb(200 27 27) 100%,
       rgba(0, 255, 132, 1) 100%
     );
   }
   &--contact {
-    background-color: #4f1c36;
+    background: linear-gradient(
+      30deg,
+      rgba(0, 23, 36, 1) 0%,
+      rgb(121, 16, 148) 100%,
+      rgba(0, 255, 132, 1) 100%
+    );
   }
   &--work {
-    background-color: #1c4150;
+    background: linear-gradient(
+      50deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgb(35, 133, 165) 100%,
+      rgba(0, 255, 132, 1) 100%
+    );
   }
 }
 
